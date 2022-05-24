@@ -1,2 +1,3 @@
 server:
   port:${PORT:8080}
+message: Consumer config weather-service DEV

@@ -1,3 +1,5 @@
 message: Caixa DH ambiente de DEV
 server:
   port: 8081
+moeda: Real
+notas: 10,20,50

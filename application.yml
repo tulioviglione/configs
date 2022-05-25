@@ -1,3 +1,17 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+management:
+  info:
+    env:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health,info 
+info:
+  author: Teste        
 server:
   port:${PORT:9999}
 message: Generic

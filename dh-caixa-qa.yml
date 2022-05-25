@@ -1,0 +1,5 @@
+message: Caixa DH ambiente de QA
+server:
+  port: 8080
+moeda: Dolar
+notas: 10,20,50

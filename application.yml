@@ -11,7 +11,8 @@ management:
       exposure:
         include: health,info 
 info:
-  author: Teste        
+  author: Tulio L. Viglione
+  mail: tulio.l.viglione@gmail.com
 server:
-  port:${PORT:9999}
+  port: ${PORT:9999}
 message: Generic

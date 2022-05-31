@@ -3,11 +3,11 @@ server:
   cloud:
     gateway:
       routes:
-        - id:subscriptionRoute
+        - id: subscriptionRoute
           uri: http://localhost:8083
           predicates:
            - path =/subscription/**
-        - id:courseRoute
+        - id: courseRoute
           uri: http://localhost:8082
           predicates:
            - path =/course/**           

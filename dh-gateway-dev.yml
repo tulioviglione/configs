@@ -1,2 +1,15 @@
 server:
   port: 8080
+
+spring:  
+  cloud:
+    gateway:
+      routes:
+        - id: usuarioRoute
+          uri: lb://DH-USUARIO
+          predicates:
+           - Path=/usuario/**
+        - id: contaRoute
+          uri: lb://DH-CONTA
+          predicates:
+           - Path=/conta/**

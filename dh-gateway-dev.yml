@@ -13,3 +13,6 @@ spring:
           uri: lb://DH-CONTA
           predicates:
            - Path=/conta/**
+          filters:
+            - AddRequestHeader=user-request-header, custom-user-request-header
+            - AddResponseHeader=user-respons-header, custom-user-response-header              

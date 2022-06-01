@@ -14,5 +14,5 @@ info:
   author: Tulio L. Viglione
   mail: tulio.l.viglione@gmail.com
 server:
-  port: ${PORT:8080}
+  port: ${PORT:9999}
 message: Generic

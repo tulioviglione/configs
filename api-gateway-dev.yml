@@ -1,18 +1,18 @@
 server:
   port: 8080
-  
+
 spring:  
   cloud:
     gateway:
       routes:
-        - id: subscriptionRoute
-          uri: http://localhost:8083
+        - id: usuarioRoute
+          uri: lb://DH-USUARIO
           predicates:
-           - Path=/subscription/**
-        - id: courseRoute
-          uri: lb://COURSE-SERVICE
+           - Path=/usuario/**
+        - id: contaRoute
+          uri: lb://DH-CONTA
           predicates:
-           - Path=/course/**
+           - Path=/conta/**
           filters:
             - AddRequestHeader=user-request-header, custom-user-request-header
-            - AddResponseHeader=user-respons-header, custom-user-response-header           
+            - AddResponseHeader=user-respons-header, custom-user-response-header 

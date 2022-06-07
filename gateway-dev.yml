@@ -1,2 +1,14 @@
 server:
   port: 8080
+spring:  
+  cloud:
+    gateway:
+      routes:
+        - id: jogosRoute
+          uri: lb://JOGOS
+          predicates:
+           - Path=/jogos/**
+        - id: bibliotecaRoute
+          uri: lb://BIBLIOTECA
+          predicates:
+           - Path=/biblioteca/**

@@ -16,3 +16,7 @@ spring:
           uri: lb://MUSICA
           predicates:
            - Path=/musica/**
+        - id: playlistRoute
+          uri: lb://PLAYLIST
+          predicates:
+           - Path=/playlist/**

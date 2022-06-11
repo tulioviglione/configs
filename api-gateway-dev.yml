@@ -6,11 +6,11 @@ spring:
     gateway:
       routes:
         - id: usuarioRoute
-          uri: lb://DH-USUARIO
+          uri: lb://API-USUARIO
           predicates:
            - Path=/usuario/**
         - id: contaRoute
-          uri: lb://DH-CONTA
+          uri: lb://API-CONTA
           predicates:
            - Path=/conta/**
           filters:

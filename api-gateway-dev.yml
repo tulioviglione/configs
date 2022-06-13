@@ -5,6 +5,10 @@ spring:
   cloud:
     gateway:
       routes:
+        - id: accountRoute
+          uri: http://localhost:8080
+          predicates:
+           - Path=/account/**
         - id: usuarioRoute
           uri: lb://API-USUARIO
           predicates:

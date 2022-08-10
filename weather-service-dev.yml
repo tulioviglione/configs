@@ -1,2 +1,5 @@
 server:
   port: 8085
+info:
+  author: Blabla
+  mail: blabla@gmail.com

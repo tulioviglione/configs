@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:  
+  cloud:
+    gateway:
+      routes:
+        - id: apiweatherroute
+          uri: lb://WEATHER-SERVICE
+          predicates:
+            - Path=/weather/**
+        - id: apiusuarioroute
+          uri: lb://USUARIO-SERVICE
+          predicates:
+           - Path=/usuario/**
+        

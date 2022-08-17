@@ -1,5 +1,7 @@
 server:
   port: 8085
+  servlet:
+    context-path: /weather/
 info:
   author: Blabla
   mail: blabla@gmail.com

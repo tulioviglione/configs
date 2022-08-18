@@ -4,6 +4,8 @@ server:
 spring:  
   cloud:
     gateway:
+      default-filters:
+        - name: LogFilter
       routes:
         - id: apiweatherroute
           uri: lb://WEATHER-SERVICE

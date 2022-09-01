@@ -2,3 +2,4 @@ server:
   port: 8086
   servlet:
     context-path: /catalogo/
+message: Mensagem catalogo. Foi recebido de Carros ->    

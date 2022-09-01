@@ -11,10 +11,17 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,info 
+        include: circuitbreakers,circuitbreakerevents,health,info
+  health:
+      circuitbreakers:
+          enabled: true
+  endpoint:
+    health:
+      show-details: always
 info:
   author: Tulio L. Viglione
   mail: tulio.l.viglione@gmail.com
 server:
   port: ${PORT:9999}
+
 message: Generic

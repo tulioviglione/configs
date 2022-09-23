@@ -9,6 +9,10 @@ spring:
 queue:
   api-carro:
     name: CarroQueue
+  movie:
+    name: MovieQueue
+  serie:
+    name: SerieQueue
 eureka:
   instance:
     hostname: localhost

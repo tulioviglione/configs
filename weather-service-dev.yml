@@ -1,8 +1,0 @@
-server:
-  port: 8085
-  servlet:
-    context-path: /api-weather/
-info:
-  author: Blabla
-  mail: blabla@gmail.com
-country: Brazil

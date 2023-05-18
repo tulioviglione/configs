@@ -1,1 +1,3 @@
+server:
+  port: ${PORT:8082}
 message: Teste client-service yml DEV

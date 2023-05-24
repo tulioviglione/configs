@@ -7,7 +7,7 @@ spring:
         - name: LogFilter
       routes:
         - id: subscriptionRoute
-          uri: http://SUBSCRIPTION-SERVICE
+          uri: lb://SUBSCRIPTION-SERVICE
           predicates:
             - Path=/subscription/**
         - id: courseRoute

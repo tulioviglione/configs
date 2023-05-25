@@ -5,7 +5,7 @@ spring:
     gateway:
       routes:
         - id: subscriptionRoute
-          uri: http://localhost:8087
+          uri: lb://SUBSCRIPTION-SERVICE
           predicates:
             - Path=/subscription/**
         - id: courseRoute

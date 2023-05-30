@@ -10,8 +10,8 @@ spring:
           uri: lb://SUBSCRIPTION-SERVICE
           predicates:
             - Path=/subscription/**
-          filters:
-            - name: SubscriptionFilter
+#          filters:
+#            - name: SubscriptionFilter
         - id: courseRoute
           uri: lb://COURSE-SERVICE
           predicates:

@@ -3,8 +3,8 @@ server:
 spring:
   cloud:
     gateway:
-      default-filters:
-        - name: LogFilter
+#      default-filters:
+#        - name: LogFilter
       routes:
         - id: subscriptionRoute
           uri: lb://SUBSCRIPTION-SERVICE

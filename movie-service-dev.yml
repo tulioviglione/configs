@@ -1,4 +1,4 @@
 server:
-  port: 8081
-#  servlet:
-#    context-path: /movie-api
+  port: 8091
+  servlet:
+    context-path: /movie-api

@@ -1,2 +1,5 @@
 server:
   port: 8090
+server:
+  servlet:
+    context-path: /catalog-api

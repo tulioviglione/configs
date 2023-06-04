@@ -1,6 +1,13 @@
 server:
   port: 8080
 spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 331760295079-rlvr52deinodmvjq6do62bnkscinmmov.apps.googleusercontent.com
+      client-secret: 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
   cloud:
     gateway:
 #      default-filters:

@@ -3,6 +3,10 @@ server:
 spring:
   security:
     oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://accounts.google.com
+          jwk-set-uri: https://www.googleapis.com/oauth2/v3/certs
       client:
         registration:
           google:

@@ -12,7 +12,8 @@ spring:
             redirect-uri: http://localhost:8080/login/oauth2/code/google        
   cloud:
     gateway:
-#      default-filters:
+      default-filters:
+        - TokenRelay
 #        - name: LogFilter
       routes:
         - id: catalogRoute

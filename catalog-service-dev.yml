@@ -15,9 +15,3 @@ resilience4j:
         waitDurationInOpenState: 15000
         permittedNumberOfCallsInHalfOpenState: 3
         automaticTransitionFromOpenToHalfOpenEnabled: true  
-  retry:
-    instances:
-      movie:
-        maxAttempts: 3
-        waitDuration: 1000
-        retryExceptions[0]: feign.FeignException$InternalServerErro 

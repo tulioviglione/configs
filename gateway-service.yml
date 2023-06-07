@@ -1,23 +1,23 @@
 server:
   port: 8080
 spring:
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: https://accounts.google.com
-          jwk-set-uri: https://www.googleapis.com/oauth2/v3/certs
-      client:
-        registration:
-          google:
-            client-id: 331760295079-rlvr52deinodmvjq6do62bnkscinmmov.apps.googleusercontent.com
-            client-secret: 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
-            scope: openid
-            redirect-uri: http://localhost:8080/login/oauth2/code/google        
+  #security:
+    #oauth2:
+      #resourceserver:
+       # jwt:
+       #   issuer-uri: https://accounts.google.com
+      #    jwk-set-uri: https://www.googleapis.com/oauth2/v3/certs
+     # client:
+     #   registration:
+    #      google:
+   #         client-id: 331760295079-rlvr52deinodmvjq6do62bnkscinmmov.apps.googleusercontent.com
+  #          client-secret: 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
+ #           scope: openid
+#            redirect-uri: http://localhost:8080/login/oauth2/code/google        
   cloud:
     gateway:
-      default-filters:
-        - TokenRelay
+    #  default-filters:
+   #     - TokenRelay
 #        - name: LogFilter
       routes:
         - id: catalogRoute

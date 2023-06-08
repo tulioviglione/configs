@@ -38,14 +38,3 @@ resilience4j:
         waitDurationInOpenState: 50s
         permittedNumberOfCalssInHalfOpenState: 2
         automaticTransitionFromOpenToHalfIfOpenEnabled: true
-
-  retry:
-    instances:
-      movie-service:
-        maxAttempts: 3
-        waitDuration: 10s
-        retryExceptions:
-          - feign.FeignException$InternalServerError
-          - org.springframework.web.client.HttpServerErrorException
-          - java.util.concurrent.TimeoutException
-          - java.io.IOException

@@ -3,16 +3,19 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka/
 management:
+  health:
+    circuitbreakers:
+      enabled: true
   info:
     env:
       enabled: true
   endpoints:
     web:
       exposure:
-        include: health,info
-#  endpoint:
-#    health:
-#      show-details: always
+        include: health,info,circuitbreakers,circuitbreakerevents
+  endpoint:
+    health:
+      show-details: always
 info:
   author: Tulio L. Viglione
   mail: tulio.l.viglione@gmail.com
@@ -20,3 +23,29 @@ info:
 server:
   port: ${PORT:9999}
 message: Mensagem generica
+
+
+## Resilience4J configs for CircuitBreaker Pattern
+resilience4j:
+  circuitbreaker:
+    instances:
+      movie-service:
+        allowHealthIndicatorToFail: false
+        registerHealthIndicator: true
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 5
+        failueRateThreshold: 50
+        waitDurationInOpenState: 50s
+        permittedNumberOfCalssInHalfOpenState: 2
+        automaticTransitionFromOpenToHalfIfOpenEnabled: true
+
+  retry:
+    instances:
+      movie-service:
+        maxAttempts: 3
+        waitDuration: 10s
+        retryExceptions:
+          - feign.FeignException$InternalServerError
+          - org.springframework.web.client.HttpServerErrorException
+          - java.util.concurrent.TimeoutException
+          - java.io.IOException

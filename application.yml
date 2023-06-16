@@ -1,3 +1,9 @@
+spring:
+  rabbitmq:
+    username: guest
+    password: guest
+    host: localhost
+    port: 5672
 eureka:
   client:
     service-url:
@@ -24,6 +30,9 @@ server:
   port: ${PORT:9999}
 message: Mensagem generica
 
+queue:
+  movie-service: queue-movie-service
+
 
 ## Resilience4J configs for CircuitBreaker Pattern
 resilience4j:
@@ -38,3 +47,4 @@ resilience4j:
         waitDurationInOpenState: 50s
         permittedNumberOfCalssInHalfOpenState: 2
         automaticTransitionFromOpenToHalfIfOpenEnabled: true
+        

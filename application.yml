@@ -1,4 +1,6 @@
 spring:
+  zipkin:
+    base-url: http://zipkin-service:9411/
   rabbitmq:
     username: guest
     password: guest

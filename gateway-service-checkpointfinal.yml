@@ -3,8 +3,6 @@ server:
 spring:
   cloud:
     gateway:
-      default-filters:
-        - name: LogFilter
       routes:
         - id: catalogRoute
           uri: lb://CATALOG-SERVICE
@@ -14,3 +12,7 @@ spring:
           uri: lb://MOVIE-SERVICE
           predicates:
             - Path=/movie-api/**
+        - id: serieRoute
+          uri: lb://SERIE-SERVICE
+          predicates:
+            - Path=/catalog-api/**

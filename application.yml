@@ -33,8 +33,7 @@ server:
 message: Mensagem generica
 
 queue:
-  movie-service: queue-movie-service
-
+  serie-service: queue-serie-service
 
 ## Resilience4J configs for CircuitBreaker Pattern
 resilience4j:

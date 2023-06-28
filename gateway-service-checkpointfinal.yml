@@ -15,4 +15,4 @@ spring:
         - id: serieRoute
           uri: lb://SERIE-SERVICE
           predicates:
-            - Path=/catalog-api/**
+            - Path=/serie-api/**

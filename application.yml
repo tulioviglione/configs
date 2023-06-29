@@ -40,7 +40,7 @@ queue:
 resilience4j:
   circuitbreaker:
     instances:
-      movie-service:
+      serie-service:
         allowHealthIndicatorToFail: false
         registerHealthIndicator: true
         slidingWindowType: COUNT_BASED
